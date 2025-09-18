@@ -5,149 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omkar Yelsange</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#0ea5e9",
-              secondary: "#7e22ce",
-              dark: "#0f172a",
-              darker: "#020617",
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #0f172a;
-        color: #e2e8f0;
-      }
-
-      .gradient-text {
-        background: linear-gradient(90deg, #0ea5e9, #7e22ce);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-
-      .card-hover {
-        transition: all 0.3s ease;
-      }
-
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(14, 165, 233, 0.2);
-      }
-
-      .nav-link {
-        position: relative;
-      }
-
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -2px;
-        left: 0;
-        background: linear-gradient(90deg, #0ea5e9, #7e22ce);
-        transition: width 0.3s ease;
-      }
-
-      .nav-link:hover::after {
-        width: 100%;
-      }
-
-      .active::after {
-        width: 100%;
-      }
-
-      .timeline-item::before {
-        content: "";
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        left: -7.5px;
-        top: 0;
-        background: linear-gradient(135deg, #0ea5e9, #7e22ce);
-      }
-
-      .skill-bar {
-        height: 8px;
-        border-radius: 4px;
-        background-color: #1e293b;
-      }
-
-      .skill-progress {
-        height: 100%;
-        border-radius: 4px;
-        background: linear-gradient(90deg, #0ea5e9, #7e22ce);
-        transition: width 1s ease-in-out;
-      }
-
-      .project-card {
-        background: linear-gradient(145deg, #1e293b, #0f172a);
-        box-shadow: 5px 5px 15px rgba(2, 6, 23, 0.5),
-          -5px -5px 15px rgba(30, 41, 59, 0.5);
-      }
-
-      .contact-input {
-        background-color: #1e293b;
-        border: 1px solid #334155;
-        transition: all 0.3s ease;
-      }
-
-      .contact-input:focus {
-        border-color: #0ea5e9;
-        box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
-      }
-
-      .btn-primary {
-        background: linear-gradient(90deg, #0ea5e9, #7e22ce);
-        transition: all 0.3s ease;
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
-      }
-
-      .social-icon {
-        transition: all 0.3s ease;
-      }
-
-      .social-icon:hover {
-        transform: translateY(-3px);
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      .floating {
-        animation: float 3s ease-in-out infinite;
-      }
-    </style>
   </head>
   <body class="bg-dark text-slate-200">
     <!-- Navigation -->
@@ -162,7 +25,10 @@
             >
 
             <!-- Name (hidden on small, visible on large screens) -->
-            <span class="hidden lg:inline gradient-text">OmkarYelsange</span>
+            <span
+              class="hidden lg:inline gradient-text text-3xl md:text-3xl font-bold mt-1"
+              >OmkarYelsange</span
+            >
           </a>
 
           <!-- Mobile menu button -->
@@ -183,7 +49,7 @@
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
             <a
-              href="https://drive.google.com/file/d/15BKHbBZUFN01rNyYLjREuOJLnAscwq4_/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1wV1ktF56uk53Qe54ILPpWVzr3-8tLg2c/view?usp=drive_link"
               class="nav-link"
               target="_blank"
               >CV
@@ -199,7 +65,7 @@
           <a href="#projects" class="block py-2 nav-link">Projects</a>
           <a href="#contact" class="block py-2 nav-link">Contact</a>
           <a
-            href="https://drive.google.com/file/d/15BKHbBZUFN01rNyYLjREuOJLnAscwq4_/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1wV1ktF56uk53Qe54ILPpWVzr3-8tLg2c/view?usp=drive_link"
             class="nav-link"
             target="_blank"
             >CV</a
@@ -211,52 +77,8 @@
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center pt-20 px-6">
       <div
-        class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between"
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-1"
       >
-        <div class="md:w-1/2 mb-12 md:mb-0">
-          <h1 class="text-4xl md:text-6xl font-bold mb-4">
-            Hey, I'm <span class="gradient-text">Omkar Yelsange</span>
-          </h1>
-          <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-slate-300">
-            Full-Stack Developer
-          </h2>
-          <p class="text-lg mb-8 text-slate-400 max-w-lg">
-            I build exceptional digital experiences that are fast, accessible,
-            and visually appealing. Let's create something amazing together.
-          </p>
-          <div class="flex space-x-4">
-            <a
-              href="#contact"
-              class="px-6 py-3 rounded-full btn-primary font-medium"
-              >Connect</a
-            >
-            <a
-              href="#projects"
-              class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition"
-              >My Work</a
-            >
-          </div>
-          <div class="flex mt-8 space-x-4">
-            <a
-              href="https://github.com/OmkarYelsange"
-              class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/omkar-yelsange"
-              class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/omkar._2_0"
-              class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-400"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
         <div class="md:w-1/2 flex justify-center">
           <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
             <div
@@ -269,12 +91,59 @@
             />
           </div>
         </div>
+        <div class="md:w-1/2 mb-12 md:mb-0">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            Hey, I'm <span class="gradient-text">Omkar </span
+            ><span class="gradient-text">Yelsange</span>
+          </h1>
+          <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-slate-300">
+            <span id="typing"></span>
+          </h2>
+          <p class="text-lg mb-8 text-slate-400 max-w-lg text-justify">
+            Robotics & Automation Engineering Student skilled in Full-Stack
+            Development, C++, and Python. Currently exploring AI/ML and
+            Automation, I’m passionate about building scalable software
+            solutions and real-world projects.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#contact"
+              class="px-6 py-3 rounded-full btn-primary font-medium"
+              >Connect</a
+            >
+            <a
+              href="#projects"
+              class="px-6 py-3 rounded-full border border-primary font-medium hover:bg-blue-600 hover:text-white transition"
+              >My Work</a
+            >
+          </div>
+          <div class="flex mt-8 space-x-4">
+            <a
+              href="https://github.com/OmkarYelsange"
+              class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/omkar-yelsange"
+              class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/omkar._2_0"
+              class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-darker">
-      <div class="container mx-auto px-6">
+      <div class="container mx-auto px-6 gap-1">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
             About <span class="gradient-text">Me</span>
@@ -286,7 +155,7 @@
 
         <div class="flex flex-col md:flex-row items-center">
           <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-            <div class="relative w-64 h-64">
+            <div class="relative w-64 h-64 md:w-75 md:h-75 lg:w-80 lg:h-80">
               <div
                 class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"
               ></div>
@@ -298,13 +167,22 @@
             </div>
           </div>
 
-          <div class="md:w-2/3 md:pl-12">
+          <div class="md:w-2/3 md:pl-12 text-justify">
             <h3 class="text-2xl font-bold mb-6">Who am I?</h3>
-            <p class="text-slate-400 mb-6">
-              I'm a passionate Full Stack Developer with over 5 years of
-              experience creating modern web applications. I specialize in
-              JavaScript ecosystems including React, Node.js, and modern CSS
-              frameworks.
+            <p class="text-slate-400 leading-relaxed mb-6">
+              I am a Robotics & Automation Engineering student with hands-on
+              experience in Full-Stack Development, C++, and Python. Passionate
+              about integrating AI, Machine Learning, and automation into
+              real-world applications, I enjoy building projects that combine
+              software development with intelligent systems.<br />
+
+              Currently, I am enhancing my skills in web development, app
+              development, and AI-powered solutions, while exploring how
+              automation and robotics can be driven by modern software
+              technologies. With a strong foundation in programming,
+              problem-solving, and innovation, I aim to contribute to impactful
+              projects and grow into a versatile Software Developer and AI/ML
+              Engineer.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -326,14 +204,14 @@
 
             <div class="flex space-x-4">
               <a
-                href="https://drive.google.com/file/d/15BKHbBZUFN01rNyYLjREuOJLnAscwq4_/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1wV1ktF56uk53Qe54ILPpWVzr3-8tLg2c/view?usp=drive_link"
                 target="_blank"
                 class="px-6 py-3 rounded-full btn-primary font-medium"
                 >Download CV</a
               >
               <a
                 href="#contact"
-                class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition"
+                class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-blue-600 hover:text-white transition"
                 >Contact Me</a
               >
             </div>
@@ -342,7 +220,9 @@
 
         <!-- Experience Timeline -->
         <div class="mt-20">
-          <h3 class="text-2xl font-bold mb-8 text-center">
+          <h3
+            class="text-3xl md:text-4xl font-bold mb-8 align-center text-center"
+          >
             My <span class="gradient-text">Experience</span>
           </h3>
 
@@ -588,7 +468,7 @@
 
         <!-- Tools & Technologies -->
         <div class="mt-16">
-          <h3 class="text-2xl font-bold mb-8 text-center">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 text-center py-10">
             Tools & <span class="gradient-text">Technologies</span>
           </h3>
 
@@ -667,6 +547,71 @@
               <i class="fab fa-python text-4xl text-blue-500 mb-2"></i>
               <span>Python</span>
             </div>
+            <div
+              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+                alt="Postman"
+                class="w-12 h-12 mb-2"
+              />
+              <span>Postman</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg"
+                alt="Vercel"
+                class="w-12 h-12 mb-2"
+              />
+              <span>Vercel</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+                alt="Firebase"
+                class="w-12 h-12 mb-2"
+              />
+              <span>Firebase</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg"
+                alt="SQL"
+                class="w-12 h-12 mb-2"
+              />
+              <span>SQL</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
+            >
+              <img
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-api-web-development-flaticons-lineal-color-flat-icons.png"
+                alt="API"
+                class="w-12 h-12 mb-2"
+              />
+              <span>API</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover"
+            >
+              <img
+                src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg"
+                alt="Django"
+                class="w-12 h-12 mb-2"
+              />
+              <span>Django</span>
+            </div>
           </div>
         </div>
       </div>
@@ -689,7 +634,7 @@
           <div class="project-card rounded-xl overflow-hidden card-hover">
             <div class="h-48 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="/Images/image6.png"
                 alt="Project 1"
                 class="w-full h-full object-cover"
               />
@@ -697,18 +642,18 @@
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">MINI-Chat App</h3>
               <p class="text-slate-400 mb-4">
-                A full-featured e-commerce platform built with React, Node.js,
-                and MongoDB.
+                Built a real-time messaging app with secure authentication, live
+                chat, and active user presence.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >React</span
+                  >React.js</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
                   >Node.js</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >MongoDB</span
+                  >Firebase</span
                 >
               </div>
               <div class="flex space-x-3">
@@ -723,26 +668,26 @@
           <div class="project-card rounded-xl overflow-hidden card-hover">
             <div class="h-48 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1555421689-3f034debb7a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="/Images/image5.png"
                 alt="Project 2"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Airbnb Clone</h3>
+              <h3 class="text-xl font-bold mb-2">AI-Chatbot</h3>
               <p class="text-slate-400 mb-4">
-                A productivity app for managing tasks with drag-and-drop
-                functionality.
+                Developed an AI-powered chatbot by integrating Google Gemini API
+                for intelligent, context-aware responses.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >React</span
+                  >React.js</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
                   >Firebase</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >TailwindCSS</span
+                  >Python</span
                 >
               </div>
               <div class="flex space-x-3">
@@ -757,26 +702,27 @@
           <div class="project-card rounded-xl overflow-hidden card-hover">
             <div class="h-48 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="/Images/image4.png"
                 alt="Project 3"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">AI-Chatbot</h3>
+              <h3 class="text-xl font-bold mb-2">Airbnb Clone</h3>
               <p class="text-slate-400 mb-4">
-                Analytics dashboard for social media metrics with real-time
-                updates.
+                Currently developing a full-stack web application replicating
+                Airbnb core features (property listings, booking,
+                authentication).
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >Next.js</span
+                  >React.js</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >Chart.js</span
+                  >Node.js</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >TypeScript</span
+                  >Express.js</span
                 >
               </div>
               <div class="flex space-x-3">
@@ -791,7 +737,7 @@
           <div class="project-card rounded-xl overflow-hidden card-hover">
             <div class="h-48 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+                src="/Images/image2.png"
                 alt="Project 4"
                 class="w-full h-full object-cover"
               />
@@ -799,23 +745,20 @@
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Ciso-Assistant Clone</h3>
               <p class="text-slate-400 mb-4">
-                Real-time weather forecasting app with location detection.
+                Building a CURD App using React and Django
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >JavaScript</span
+                  >React.js</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
                   >API</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >CSS3</span
+                  >Django</span
                 >
               </div>
               <div class="flex space-x-3">
-                <a href="#" class="text-primary hover:text-secondary">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
                 <a href="#" class="text-primary hover:text-secondary">
                   <i class="fab fa-github"></i> Code
                 </a>
@@ -827,7 +770,7 @@
           <div class="project-card rounded-xl overflow-hidden card-hover">
             <div class="h-48 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="/Images/image1.png"
                 alt="Project 5"
                 class="w-full h-full object-cover"
               />
@@ -835,7 +778,7 @@
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
               <p class="text-slate-400 mb-4">
-                A responsive portfolio website built with modern design
+                A Responsive portfolio website built with modern design
                 principles.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
@@ -851,9 +794,6 @@
               </div>
               <div class="flex space-x-3">
                 <a href="#" class="text-primary hover:text-secondary">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
-                <a href="#" class="text-primary hover:text-secondary">
                   <i class="fab fa-github"></i> Code
                 </a>
               </div>
@@ -864,32 +804,26 @@
           <div class="project-card rounded-xl overflow-hidden card-hover">
             <div class="h-48 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="/Images/image3.png"
                 alt="Project 6"
                 class="w-full h-full object-cover"
               />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">App</h3>
+              <h3 class="text-xl font-bold mb-2">Amazon Frontend Clone</h3>
               <p class="text-slate-400 mb-4">
-                Real-time collaboration tool for remote teams with chat
-                functionality.
+                Built frontend clone of the Amazon.com homepage, using HTML5 and
+                CSS3.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >React</span
+                  >HTML5</span
                 >
                 <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >Socket.io</span
-                >
-                <span class="px-3 py-1 bg-slate-700 rounded-full text-sm"
-                  >MongoDB</span
+                  >CSS3</span
                 >
               </div>
               <div class="flex space-x-3">
-                <a href="#" class="text-primary hover:text-secondary">
-                  <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
                 <a href="#" class="text-primary hover:text-secondary">
                   <i class="fab fa-github"></i> Code
                 </a>
@@ -900,7 +834,7 @@
 
         <div class="text-center mt-12">
           <a
-            href="#"
+            href="https://github.com/OmkarYelsange"
             class="px-8 py-3 rounded-full btn-primary font-medium inline-flex items-center"
           >
             View All Projects <i class="fas fa-arrow-right ml-2"></i>
@@ -967,7 +901,7 @@
               <div class="flex space-x-4">
                 <a
                   href="https://github.com/OmkarYelsange"
-                  class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary"
+                  class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600"
                 >
                   <i class="fab fa-github text-xl"></i>
                 </a>
@@ -979,7 +913,7 @@
                 </a>
                 <a
                   href="https://www.instagram.com/omkar._2_0"
-                  class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-400"
+                  class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600"
                 >
                   <i class="fab fa-instagram text-xl"></i>
                 </a>
@@ -1103,109 +1037,10 @@
     <!-- Back to Top Button -->
     <button
       id="back-to-top"
-      class="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hidden"
+      class="fixed bottom-8 right-8 w-12 h-12 px-3 py-3 rounded-full btn-primary font-medium"
     >
       <i class="fas fa-arrow-up"></i>
     </button>
-
-    <script>
-      // Mobile menu toggle
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: "smooth",
-            });
-
-            // Close mobile menu if open
-            if (!mobileMenu.classList.contains("hidden")) {
-              mobileMenu.classList.add("hidden");
-            }
-
-            // Update active link
-            document.querySelectorAll(".nav-link").forEach((link) => {
-              link.classList.remove("active");
-            });
-            this.classList.add("active");
-          }
-        });
-      });
-
-      // Update active link on scroll
-      window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;
-
-        document.querySelectorAll("section").forEach((section) => {
-          const sectionTop = section.offsetTop - 100;
-          const sectionHeight = section.offsetHeight;
-          const sectionId = section.getAttribute("id");
-
-          if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionTop + sectionHeight
-          ) {
-            document.querySelectorAll(".nav-link").forEach((link) => {
-              link.classList.remove("active");
-              if (link.getAttribute("href") === `#${sectionId}`) {
-                link.classList.add("active");
-              }
-            });
-          }
-        });
-
-        // Show/hide back to top button
-        const backToTopButton = document.getElementById("back-to-top");
-        if (scrollPosition > 300) {
-          backToTopButton.classList.remove("hidden");
-        } else {
-          backToTopButton.classList.add("hidden");
-        }
-      });
-
-      // Back to top button
-      document.getElementById("back-to-top").addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-
-      // Animate skill bars on scroll
-      const animateSkillBars = () => {
-        const skillBars = document.querySelectorAll(".skill-progress");
-        const skillsSection = document.getElementById("skills");
-        const skillsSectionTop = skillsSection.offsetTop;
-        const windowHeight = window.innerHeight;
-
-        if (window.scrollY > skillsSectionTop - windowHeight + 200) {
-          skillBars.forEach((bar) => {
-            const width = bar.style.width;
-            bar.style.width = "0";
-            setTimeout(() => {
-              bar.style.width = width;
-            }, 100);
-          });
-
-          // Remove event listener after animation
-          window.removeEventListener("scroll", animateSkillBars);
-        }
-      };
-
-      window.addEventListener("scroll", animateSkillBars);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
